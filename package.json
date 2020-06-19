@@ -8,14 +8,17 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "eslint": "^3.9.1",
-    "eslint-config-google": "^0.7.0",
+    "eslint": "^7.2.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "gulp": "^3.9.0",
+    "prettier": "^2.0.5",
     "qunit": "^0.7.7",
     "request": "^2.65.0"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "lint": "eslint --config .eslintrc.js \"./**/*.js\"",
+    "lint:fix": "eslint --config .eslintrc.js \"./**/*.js\" --fix"
   },
   "repository": {
     "type": "git",
