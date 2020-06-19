@@ -2,7 +2,12 @@
   "name": "json-logic-js",
   "version": "1.2.2",
   "description": "Build complex rules, serialize them as JSON, and execute them in JavaScript",
-  "main": "logic.js",
+  "cdn": "dist/index.umd.js",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "jsdelivr": "dist/index.umd.js",
+  "umd:main": "dist/index.umd.js",
   "directories": {
     "test": "tests"
   },
@@ -13,12 +18,15 @@
     "gulp": "^3.9.0",
     "prettier": "^2.0.5",
     "qunit": "^0.7.7",
-    "request": "^2.65.0"
+    "request": "^2.65.0",
+    "rollup": "^2.17.0",
+    "rollup-plugin-terser": "^6.1.0"
   },
   "scripts": {
     "test": "gulp test",
     "lint": "eslint --config .eslintrc.js \"./**/*.js\"",
-    "lint:fix": "eslint --config .eslintrc.js \"./**/*.js\" --fix"
+    "lint:fix": "eslint --config .eslintrc.js \"./**/*.js\" --fix",
+    "build": "rollup --config rollup.config.js"
   },
   "repository": {
     "type": "git",
